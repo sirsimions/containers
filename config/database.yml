@@ -89,3 +89,6 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
+  username: <%= ENV[“WHERE_S_THE_MONEY_DATABASE_NAME”] %>
+  password: <%= ENV[“WHERE_S_THE_MONEY_DATABASE_PASSWORD”] %>
+  host: <%= ENV[“WHERE_S_THE_MONEY_DATABASE_HOST”] %>
