@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  truck: MyString
+  containerNumber: MyString
+  loadedDate: 2024-06-10
+  destination: MyString
+  expiryDate: 2024-06-10
+  customer: MyString
+  droppingPoint: MyString
+  thirdPartyContact: MyString
+
+two:
+  truck: MyString
+  containerNumber: MyString
+  loadedDate: 2024-06-10
+  destination: MyString
+  expiryDate: 2024-06-10
+  customer: MyString
+  droppingPoint: MyString
+  thirdPartyContact: MyString
