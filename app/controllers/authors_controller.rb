@@ -45,4 +45,4 @@ class AuthorsController < ApplicationController
         params.permit(:name, :department, :password)
     end
 end
-end
+
