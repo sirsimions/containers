@@ -40,7 +40,7 @@ module Containerbackend
     # Configure CORS to allow requests from your Netlify frontend
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'https://master--suharacontainerhandler.netlify.app/' # Replace with your Netlify site's URL
+        origins 'https://master--suharacontainerhandler.netlify.app/', 'https://dbcontainer.onrender.com'
         resource '*',
           headers: :any,
           methods: [:get, :post, :put, :patch, :delete, :options, :head]
