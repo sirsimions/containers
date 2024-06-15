@@ -24,5 +24,18 @@ class ApplicationController < ActionController::API
         @current_author ||= Author.find_by(id: author_id)
       end
     end
+
+    before_action :cors_preflight_check, if: -> { request.method == 'OPTIONS' }
+
+  private
+
+  def cors_preflight_check
+    headers['Access-Control-Allow-Origin'] = 'https://suharacontainerhandler.netlify.app'
+    headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD'
+    headers['Access-Control-Allow-Headers'] = 'Origin, Content-Type, Accept, Authorization'
+    headers['Access-Control-Allow-Credentials'] = 'true'
+    headers['Access-Control-Max-Age'] = '600'
+    head :ok
+  end
   end
   
