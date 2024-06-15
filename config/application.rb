@@ -21,6 +21,12 @@ Bundler.require(*Rails.groups)
 
 module Containerbackend
   class Application < Rails::Application
+    before_action :set_cache_headers
+    private
+
+  def set_cache_headers
+    response.headers['Cache-Control'] = 'no-store'
+  end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
