@@ -21,7 +21,7 @@
 
     resource '*',
       headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      methods: [:get, :post, :put, :patch, :delete, :options, :head],
       expose: ['Access-Token', 'Uid', 'Content-Type', 'Origin', 'Accept', 'Cache-Control']
   end
 end
