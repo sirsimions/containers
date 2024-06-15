@@ -77,6 +77,8 @@ GEM
     crass (1.0.6)
     date (3.3.4)
     erubi (1.12.0)
+    fast_jsonapi (1.5)
+      activesupport (>= 4.2)
     ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -181,6 +183,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.4)
   byebug
+  fast_jsonapi
   jwt
   listen (~> 3.3)
   pg (~> 1.1)
