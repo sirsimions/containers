@@ -8,11 +8,14 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   delete '/deleter/:id', to: 'containerdetails#destroy'
+  patch '/update/:id', to: 'containerdetails#update'
   delete '/thirddeleter/:id', to: 'third_parties#destroy'
   
   post '/input', to: 'containerdetails#create'
   get '/display', to: 'containerdetails#index'
+  get '/display/:id', to: 'containerdetails#show'  # Ensure this route is defined
   get '/thirdparty', to: 'third_parties#index'
   post '/add', to: 'third_parties#create'
+  
 
 end
